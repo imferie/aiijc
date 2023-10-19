@@ -1,0 +1,10 @@
+aiofiles==23.2.1
+alembic==1.11.3
+fastapi==0.103.1
+fastapi_users==12.1.2
+numpy==1.26.0
+pandas==2.1.1
+pydantic==2.3.0
+python-dotenv==1.0.0
+SQLAlchemy==2.0.20
+xgboost==2.0.0

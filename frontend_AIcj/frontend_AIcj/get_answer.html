@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>AI site</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <link rel="stylesheet" href="libs/bootstrap-reboot.min.css" />
+  
+      <!-- Bootstrap сетка -->
+      <link rel="stylesheet" href="libs/bootstrap-grid.min.css" />
+  
+      <!-- Шрифты с Google Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="css/styles.css" />
+      <style>
+        table tr:nth-child(even) {
+          background-color: #f2f2f2; /* Серый цвет для каждой второй строки */
+        }
+      </style>
+    </head>
+<body>
+  <header class="card-header">
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="navbar-brend">AI & СЕВЕРСТАЛЬ</a>
+          <div class="navbar-wrap">
+            <ul class="navbar-menu">
+              <li><a href="table.html">Create table</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Table editing</a></li>
+            </ul>
+            <a href="reg.html" class="log">Log in</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="get_answer">
+        <div class="container" style="margin-top: 50px; text-align:center" id="fileContent"></div>
+      </div>
+
+      <div class="container"  style=" margin-top: 50px">
+        <button class="btn custom-button " onclick="this.classList.add('clicked');" data-bs-toggle="button" id="downloadButton" >Download file</button>
+        <div style="text-align: right;">
+          <button class="btn custom-button" id="redirectButton">Перейти к аналитике ml</button>
+        </div>
+      </div>
+
+      
+    
+      <!-- Элемент для отображения изображения -->
+      <div class="container mt-4" style="padding-top: 50px;">
+        <div class="row">
+          <div class="col-md-4">
+              <img alt="График распределения" id="distributionSchedule" width="450px">
+          </div>
+          <div class="col-md-8">
+            <div class="p-3 rounded" style="background-color: aquamarine;  margin-top: 40px;">
+                <p>
+                  Круговая диаграмма, отражающая вклад успешных и неуспешных заказов в процентах от общего количества заказов. Вы можете наглядней увидеть отношения заказов который сорвуться по мнению ml, к закам, которые не сорвуться
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="gradient-line">
+
+      <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="p-3 rounded" style="background-color:aqua;  margin-top: 40px;">
+                    <p>
+                      Столбчатая диаграмма, показывающая количество заказов, в которых средства выходят за пределы разрешенных потерь и которые остаются в пределах разрешенных потерь.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img id="distributionSums" alt="График уверенности ml" style="margin-right: 50px" width="500px">
+            </div>
+        </div>
+      </div>
+
+      <hr class="gradient-line">
+
+      <div class="container mt-4" style="margin-top: 150px;">
+        <div class="row">
+          <div class="col-md-4">
+              <img alt="График распределения" id="distributionPro" width="450px">
+          </div>
+          <div class="col-md-8">
+            <div class="p-3 rounded" style="background-color:bisque;  margin-top: 40px;">
+                <p>
+                  График распределения опрделённых вероятностей срывов заказов, с которымы уверенна модель.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <script src="Ascript.js"></script>
+
+</body>
+</html>
